@@ -1,0 +1,11 @@
+/* CSS HEX */
+ --geyser: #ccd4db;
+--oslo-gray: #949b9b;
+--blue-bayoux: #526375;
+--bunker: #0d1016;
+--limed-spruce: #313d45;
+--cape-cod: #353b3b;
+--oslo-gray: #8b9399;
+--cape-cod: #4c5454;
+--nepal: #8cacc6;
+--abbey: #555556;

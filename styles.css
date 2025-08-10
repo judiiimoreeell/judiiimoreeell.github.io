@@ -1,0 +1,265 @@
+:root {
+    --geyser: #ccd4db;
+    --oslo-gray: #949b9b;
+    --blue-bayoux: #526375;
+    --bunker: #0d1016;
+    --limed-spruce: #313d45;
+    --cape-cod: #353b3b;
+    --nepal: #8cacc6;
+    --abbey: #555556;
+}
+
+@font-face {
+    font-family: 'Fuente';
+    src: url('NITEMARE.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Fuente', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--geyser);
+    background-color: var(--bunker);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header con gif animado de fondo */
+header {
+    background-image: url('background.gif'); /* Ruta al gif */
+    background-size: cover; /* Cubre todo el espacio disponible */
+    background-position: center; /* Centra el gif */
+    color: var(--geyser);
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--nepal);
+    position: relative; /* Para el overlay */
+}
+
+/* Overlay semitransparente para mejorar la legibilidad del texto */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(13, 16, 22, 0.7); /* Color de fondo semitransparente */
+    z-index: 1; /* Coloca el overlay detrás del texto */
+}
+
+header h1 {
+    font-family: 'Fuente', cursive;
+    font-size: 4rem;
+    margin: 0;
+    letter-spacing: 3px;
+    color: var(--nepal);
+    position: relative; /* Para que esté sobre el overlay */
+    z-index: 2; /* Coloca el texto sobre el overlay */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+    color: var(--geyser);
+    position: relative; /* Para que esté sobre el overlay */
+    z-index: 2; /* Coloca el texto sobre el overlay */
+}
+
+/* Navegación */
+nav {
+    background-color: var(--cape-cod);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--geyser);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: var(--nepal);
+    border-bottom: 2px solid var(--nepal);
+}
+
+/* Sección Sobre Mí */
+#about {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--bunker);
+}
+
+#about h2 {
+    font-family: 'Fuente', cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--nepal);
+}
+
+#about p {
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.1rem;
+    color: var(--geyser);
+}
+
+/* Botón de descarga */
+.btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--limed-spruce);
+    color: var(--geyser);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: var(--nepal);
+    color: var(--bunker);
+}
+
+/* Sección de trabajos */
+#work {
+    padding: 60px 0;
+    background-color: var(--bunker);
+}
+
+#work h2 {
+    font-family: 'Fuente', cursive;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--nepal);
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--limed-spruce);
+    padding: 15px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(140, 172, 198, 0.3);
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project h3 {
+    font-family: 'Fuente', sans-serif;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: var(--nepal);
+}
+
+.project p {
+    font-size: 1rem;
+    color: var(--geyser);
+}
+
+/* Formulario de contacto */
+#contact {
+    padding: 60px 0;
+    background-color: var(--bunker);
+}
+
+#contact h2 {
+    font-family: 'Fuente', cursive;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--nepal);
+}
+
+#contact p {
+    font-size: 1.1rem;
+    color: var(--geyser);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--limed-spruce);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--bunker);
+    color: var(--geyser);
+}
+
+form button {
+    padding: 10px;
+    background-color: var(--limed-spruce);
+    color: var(--geyser);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--nepal);
+    color: var(--bunker);
+}
+
+/* Footer */
+footer {
+    background-color: var(--limed-spruce);
+    color: var(--geyser);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 5px solid var(--nepal);
+}
