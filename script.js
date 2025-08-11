@@ -15,3 +15,4 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     alert('Gracias por tu mensaje. Te contactaré pronto.');
     this.reset();
 });
+
